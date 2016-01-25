@@ -1,1 +1,1 @@
-items.find({"$and" : [{"repo" : "libs-releases-local"} ]}).include("property.*")
+items.find({"$and" : [{"repo" : "libs-snapshot-local"} ]}).include("property.*")
