@@ -5,7 +5,7 @@
 <artifactId>gi3</artifactId>
 <version>1.0</version>
 <packaging>pom</packaging>
-<name>gi3</name>
+<name>gi3-snapshot</name>
 	<distributionManagement>
  		<repository>
 			<id>artifactory</id>
