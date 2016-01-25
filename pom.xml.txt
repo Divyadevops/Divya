@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>gi.gpr.ph3.webe.v.m3</groupId>
+<artifactId>nola-parent</artifactId>
+<version>1.0-SNAPSHOT</version>
+<packaging>pom</packaging>
+<name>GI3_Nola</name>
+<!--<modules>
+	<module>source\compile-pom.xml</module>
+	<!--<module>source\sonar-pom.xml</module>-->
+	<module>source\prsuite-pom.xml</module>
+	<module>source\repsuite-pom.xml</module>
+	<module>source\slsuite-pom.xml</module>
+	<module>source\zmsuite-pom.xml</module>
+	<module>source\dmsuite-pom.xml</module>
+	<module>source\ccasuite-pom.xml</module>
+	<module>source\ear-pom.xml</module>
+</modules>-->
+
+<properties>
+	<market>${market}</market>
+	<sonar.hostUrl>http://localhost:9000</sonar.hostUrl>
+	<sonar.dbUName>sonar</sonar.dbUName>
+	<sonar.dbPw>sonar</sonar.dbPw>
+	<sonar.dbUrl>jdbc:mysql://localhost:3306/sonar?useUnicode=true&amp;characterEncoding=utf8&amp;rewriteBatchedStatements=true</sonar.dbUrl>
+	<sonar.profile>${sonar.profile}</sonar.profile>
+</properties>
+	<distributionManagement>
+<!--  		<repository>
+			<id>ci-nexus</id>
+			<name>Internal Releases</name>
+			<uniqueVersion>false</uniqueVersion>
+			<url>http://ryelxjenkap1.rye.avon.com:8081/nexus/content/repositories/avon-gi3-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>ci-nexus</id>
+			<name>Internal Releases</name>
+			<uniqueVersion>false</uniqueVersion>
+			<url>http://ryelxjenkap1.rye.avon.com:8081/nexus/content/repositories/avon-gi3-snapshots/</url>
+		</snapshotRepository> -->
+		<repository>
+			<id>artifactory</id>
+			<name>Internal Releases</name>
+			<uniqueVersion>false</uniqueVersion>
+			<url>http://ryelxdmaoci1.rye.avon.com:8081/artifactory/GI3</url>
+		</repository>
+		<snapshotRepository>
+			<id>artifactory</id>
+			<name>Internal Releases</name>
+			<uniqueVersion>false</uniqueVersion>
+			<url>http://ryelxdmaoci1.rye.avon.com:8081/artifactory/GI3</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>
+<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>autoincrement-versions-maven-plugin</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <executions>
+                <execution>
+                        <id>update-pom-versions</id>
+                        <goals>
+                                <goal>increment</goal>
+                                <goal>commit</goal>
+                        </goals>
+                        <phase>compile</phase>
+                        <configuration>
+                                <autoIncrementVersion>true</autoIncrementVersion>
+                        </configuration>
+                </execution>
+        </executions>
+</plugin>
