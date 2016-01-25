@@ -21,3 +21,7 @@
 		</snapshotRepository>
 	</distributionManagement>
 </project>
+<scm>
+<connection>scm:git:git://github.com/Divyadevops/Divya/gi3-Sanpshot.git</connection>
+<developerconnection>scm:git:git://github.com/Divyadevops/Divya/gi3-Snapshot.git</developerconnection>
+</scm>
