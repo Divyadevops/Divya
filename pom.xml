@@ -3,7 +3,7 @@
 <modelVersion>4.0.0</modelVersion>
 <groupId>gi3-snapshot</groupId>
 <artifactId>gi3</artifactId>
-<version>1.0</version>
+<version>${version_number}</version>
 <packaging>pom</packaging>
 <name>gi3-snapshot</name>
 	<distributionManagement>
